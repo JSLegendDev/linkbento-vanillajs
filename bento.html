@@ -11,14 +11,19 @@
         <label>Title</label>
         <input id="bento-title" placeholder="Enter link bento title">
         <label>Description</label>
-        <textarea id="bento-description">What is this link bento about?</textarea>
-        <div id="links">
-           <!-- Fill this dynamically  -->
+        <textarea id="bento-description" placeholder="What is this link bento about?"></textarea>
+        <div>
+            <div id="links">
+                <!-- Fill this dynamically  -->
+            </div>
         </div>
-        <button id="generate-bento-link">Generate link</button>
+        <div>
+            <button id="add-button">Add link</button>
+            <button id="generate-bento-link">Generate bento link</button>
+        </div>
     </form>
     <div>
-        <textarea id="generated-link"></textarea>
+        <textarea id="generated-link-area"></textarea>
         <button id="copy-button">Copy to clipboard</button>
     </div>
     <script type="module" src="/main.js"></script>

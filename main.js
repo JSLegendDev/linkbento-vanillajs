@@ -1,0 +1,74 @@
+function createLinkForm() {
+    const root = {
+        container: document.createElement('div'),
+        urlField: document.createElement('input'),
+        titleField: document.createElement('input'),
+        descriptionField: document.createElement('textarea'),
+        removeButton: document.createElement('button')
+    }
+
+    root.container.appendChild(root.removeButton)
+    root.container.appendChild(root.urlField)
+    root.container.appendChild(root.titleField)
+    root.container.appendChild(root.descriptionField)
+
+    root.urlField.placeholder = 'paste link here'
+    root.urlField.name = 'url-field'
+    root.titleField.placeholder = 'give your link a title'
+    root.titleField.name = 'title-field'
+    root.descriptionField.placeholder = 'What this link is about?'
+    root.descriptionField.name = 'description-field'
+    root.removeButton.innerText = 'Remove'
+
+    root.removeButton.addEventListener('click', () => {
+        root.container.remove()
+    })
+ 
+    return root.container
+}
+
+
+function main() {
+    const links = document.getElementById('links')
+    links.appendChild(createLinkForm())
+
+    const addButton = document.getElementById('add-button')
+    addButton.addEventListener('click', (event) => {
+        // because parent is form tag which will cause a refresh.
+        // we want to prevent that.
+        event.preventDefault()
+        links.appendChild(createLinkForm())
+    })
+
+    const generateBentoLinkButton = document.getElementById('generate-bento-link')
+    const generatedLinkArea = document.getElementById('generated-link-area')
+    generateBentoLinkButton.addEventListener('click', (event) => {
+        // same reason as for the add button
+        event.preventDefault()
+
+        const links = document.getElementById('links').children
+        const bentoData = []
+        for (const link of links) {
+            const linkData = {}
+            for (const element of link.children) {
+                if (element.name === 'url-field') {
+                    linkData.urlField = element.value
+                    continue
+                }
+
+                if (element.name === 'title-field') {
+                    linkData.titleField = element.value
+                    continue
+                }
+
+                if (element.name === 'description-field') {
+                    linkData.descriptionField = element.value
+                    continue
+                }
+            }
+            bentoData.push(linkData) 
+        }
+        generatedLinkArea.value = `${window.location.href}?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
+    })
+}
+main()
