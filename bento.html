@@ -7,7 +7,20 @@
     <title>Link Bento</title>
 </head>
 <body>
-    <div id="app"></div>
+    <form id="bento-form">
+        <label>Title</label>
+        <input id="bento-title" placeholder="Enter link bento title">
+        <label>Description</label>
+        <textarea id="bento-description">What is this link bento about?</textarea>
+        <div id="links">
+           <!-- Fill this dynamically  -->
+        </div>
+        <button id="generate-bento-link">Generate link</button>
+    </form>
+    <div>
+        <textarea id="generated-link"></textarea>
+        <button id="copy-button">Copy to clipboard</button>
+    </div>
     <script type="module" src="/main.js"></script>
 </body>
 </html>
