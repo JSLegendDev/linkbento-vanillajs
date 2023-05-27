@@ -1,22 +1,28 @@
-const FIELDSTYLES = [
-    'self-center',
-    'bg-gray-200',
-    'shadow',
-    'appearance-none',
-    'border',
-    'rounded',
-    'w-full',
-    'py-2',
-    'px-3', 
-    'my-3',
-    'text-gray-700',
-    'leading-tight',
-    'focus:outline-none',
-    'focus:shadow-outline'
-]
 
-const inputFields = document.querySelectorAll('.input-field')
 
-for (const inputField of inputFields) {
-    inputField.classList.add(...FIELDSTYLES)
+
+
+function main() {
+    const linkForm = {
+        root: document.createElement('div'),
+        link: document.createElement('input'),
+        title: document.createElement('input'),
+        description: document.createElement('input'),
+        addBtn: document.createElement('button')
+    }
+
+    linkForm.addBtn.innerText = 'Add link'
+    linkForm.addBtn.addEventListener('click', () => {
+        console.log(linkForm.link.value)
+    })
+
+
+    linkForm.root.appendChild(linkForm.link)
+    linkForm.root.appendChild(linkForm.title)
+    linkForm.root.appendChild(linkForm.description)
+    linkForm.root.appendChild(linkForm.addBtn)
+
+    document.getElementById('app').appendChild(linkForm.root)
 }
+
+main()
