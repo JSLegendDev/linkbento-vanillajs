@@ -3,20 +3,19 @@ function createLinkForm() {
         container: document.createElement('div'),
         urlField: document.createElement('input'),
         titleField: document.createElement('input'),
-        descriptionField: document.createElement('textarea'),
+        descriptionField: document.createElement('input'),
         removeButton: document.createElement('button')
     }
-    root.container.classList.add('column-container')
     root.container.appendChild(root.removeButton)
     root.container.appendChild(root.urlField)
     root.container.appendChild(root.titleField)
     root.container.appendChild(root.descriptionField)
 
-    root.urlField.placeholder = 'paste link here'
+    root.urlField.placeholder = 'Link'
     root.urlField.name = 'url-field'
-    root.titleField.placeholder = 'give your link a title'
+    root.titleField.placeholder = 'Title'
     root.titleField.name = 'title-field'
-    root.descriptionField.placeholder = 'What this link is about?'
+    root.descriptionField.placeholder = 'Description'
     root.descriptionField.name = 'description-field'
     root.removeButton.innerText = 'Remove'
 
@@ -41,7 +40,7 @@ function main() {
     })
 
     const generateBentoLinkButton = document.getElementById('generate-bento-link')
-    const generatedLinkArea = document.getElementById('generated-link-area')
+    const generatedLink = document.getElementById('generated-link')
     generateBentoLinkButton.addEventListener('click', (event) => {
         // same reason as for the add button
         event.preventDefault()
@@ -72,12 +71,12 @@ function main() {
             }
             bentoData.push(linkData) 
         }
-        generatedLinkArea.value = `${location.protocol}${location.host}/link.html?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
+        generatedLink.innerText = `${location.protocol}${location.host}/link.html?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
     })
 
     const copyButton = document.getElementById('copy-button')
     copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(generatedLinkArea.value)
+        navigator.clipboard.writeText(generatedLink.innerText)
         const message = document.getElementById('message')
         message.innerText = 'Link copied to clipboard!'
         setTimeout(() => message.innerText = '', 2000)

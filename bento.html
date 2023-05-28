@@ -9,31 +9,23 @@
     <title>Link Bento</title>
 </head>
 <body>
-    <form id="bento-form" class="centered-container">
-        <span>
-            <label>Title</label>
-            <input id="bento-title" placeholder="Enter link bento title">
-        </span>
-        <span>
-            <label>Author</label>
-            <input id="bento-author" placeholder="Enter your name">
-        </span>
-        <span class="centered-container">
-            <label>Description</label>
-            <textarea id="bento-description" placeholder="What is this link bento about?"></textarea>
-        </span>
-        <div>
-            <div id="links">
-                <!-- Fill this dynamically  -->
-            </div>
+    <h1>Make your link bento</h1>
+    <form id="bento-form" class="column">
+        <input id="bento-title" placeholder="Title">
+        <input id="bento-author" placeholder="Name">
+        <input id="bento-description" placeholder="Description">
+       
+        <div id="links">
+            <!-- Fill this dynamically  -->
         </div>
+       
         <div>
             <button id="add-button">Add link</button>
             <button id="generate-bento-link">Generate bento link</button>
         </div>
     </form>
-    <div class="column-container">
-        <textarea id="generated-link-area"></textarea>
+    <div class="column">
+        <p id="generated-link"></p>
         <button id="copy-button">Copy to clipboard</button>
         <span id="message"></span>
     </div>

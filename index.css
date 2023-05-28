@@ -8,34 +8,18 @@
     color: #28282B;
 }
 
-.centered-container {
+h1 {
+    text-align: center;
+}
+
+.column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    justify-content: center;
+    margin: 0 10vw;
 }
 
-.text-container {
-    word-break: break-word;
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
-
-#title {
-    font-weight: bolder;
-    margin-bottom: 0;
-}
-
-#subtitle {
-    margin-top: 1vh;
-}
-
-.button-style {
-    margin-top: 10vh;
-    color: #28282B;
-    border-style: solid;
-    border-color: #28282B;
-    border-radius: 5px;
-    padding: 1vw;
-    text-decoration: none;
-    background-color: aqua; 
+#generated-link {
+    overflow-wrap: break-word;
 }
