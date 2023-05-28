@@ -17,7 +17,13 @@ h1 {
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    margin: 0 10vw;
+    margin: 0 30vw;
+}
+
+@media only screen and (max-width: 800px) {
+    .column {
+        margin: 0 10vw;
+    }
 }
 
 #generated-link {
