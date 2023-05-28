@@ -68,7 +68,15 @@ function main() {
             }
             bentoData.push(linkData) 
         }
-        generatedLinkArea.value = `${window.location.href}?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
+        generatedLinkArea.value = `${location.protocol}${location.host}/link.html?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
+    })
+
+    const copyButton = document.getElementById('copy-button')
+    copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(generatedLinkArea.value)
+        const message = document.getElementById('message')
+        message.innerText = 'Link copied to clipboard!'
+        setTimeout(() => message.innerText = '', 2000)
     })
 }
 main()
