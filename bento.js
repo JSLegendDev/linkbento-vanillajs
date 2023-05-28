@@ -49,6 +49,7 @@ function main() {
         const links = document.getElementById('links').children
         const bentoData = [{
             bentoTitle: document.getElementById('bento-title').value,
+            bentoAuthor: document.getElementById('bento-author').value,
             bentoDescription: document.getElementById('bento-description').value
         }]
         for (const link of links) {
