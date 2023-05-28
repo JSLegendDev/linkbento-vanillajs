@@ -6,7 +6,7 @@ function createLinkForm() {
         descriptionField: document.createElement('textarea'),
         removeButton: document.createElement('button')
     }
-
+    root.container.classList.add('column-container')
     root.container.appendChild(root.removeButton)
     root.container.appendChild(root.urlField)
     root.container.appendChild(root.titleField)
