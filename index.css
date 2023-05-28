@@ -29,3 +29,7 @@ h1 {
 #generated-link {
     overflow-wrap: break-word;
 }
+
+#links {
+    margin: 3vh 0;
+}
