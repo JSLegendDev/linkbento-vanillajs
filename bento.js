@@ -47,7 +47,10 @@ function main() {
         event.preventDefault()
 
         const links = document.getElementById('links').children
-        const bentoData = []
+        const bentoData = [{
+            bentoTitle: document.getElementById('bento-title').value,
+            bentoDescription: document.getElementById('bento-description').value
+        }]
         for (const link of links) {
             const linkData = {}
             for (const element of link.children) {
