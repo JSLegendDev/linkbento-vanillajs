@@ -6,6 +6,7 @@
 :root {
     font-family: Pangolin, Arial, Helvetica, sans-serif;
     color: #28282B;
+    font-size: calc(1em + 0.2vw);
 }
 
 .centered-text {
@@ -20,11 +21,17 @@
     margin: 0 30vw;
 }
 
+.link {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 800px) {
@@ -47,4 +54,27 @@
 
 #links > * > * {
     margin-top: 1vh;
+}
+
+#generate-bento-link {
+    margin-top: 4vh;
+}
+
+button {
+    border-color:#28282B;
+    color:#28282B;
+    background-color: #dedede;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: Pangolin;
+    padding: 0.5vh 0;
+}
+
+button:active {
+    background-color: #a1a1a1;
+}
+
+input {
+    font-size: 1rem;
+    font-family: Pangolin;
 }
