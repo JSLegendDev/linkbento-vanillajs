@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <script defer src="bento.js"></script>
     <title>Link Bento</title>
-  </head>
-  <body>
-    <header>
-          <h1 id="title">Link Bento</h1>
-          <p id="subtitle">Make a link lunchbox that you can send to your friends or family</p>
-    </header>
-    <div>
-      <section>
+</head>
+<body>
+    <header class="column">
+        <h1 id="title" class="centered-text">Link Bento</h1>
+        <p id="subtitle" class="centered-text">Make a link lunchbox that you can send to your friends or family</p>
         <h2>What is this?</h2>
         <p>
-          Inspired by the japanese lunch box called "bento" the idea is to make a "lunch box" of carefully selected links that you send
-          to your friends or family with a single link. 
+            Inspired by the japanese lunch box called "bento" the idea is to make a "lunch box" of carefully selected links that you send
+            to your friends or family with a single link. 
         </p>
-        <p>In addition to selecting links you can leave a message for every link you decide to include and for the link bento as well.</p>
-      </section>
-      <a href="/bento.html">Create a link bento</a>
+        <h2>Make your link bento</h2>
+    </header>
+    <form id="bento-form" class="column">
+        <label>Title</label>
+        <input id="bento-title">
+        <label>Author</label>
+        <input id="bento-author">
+        <label>Description</label>
+        <input id="bento-description">
+       
+        <div id="links">
+            <!-- Fill this dynamically  -->
+        </div>
+       
+        <div>
+            <button id="add-button">Add link</button>
+            <button id="generate-bento-link">Generate bento link</button>
+        </div>
+    </form>
+    <div class="column">
+        <p id="generated-link"></p>
+        <button id="copy-button">Copy to clipboard</button>
+        <span id="message" class="centered-text"></span>
     </div>
-  </body>
+</body>
 </html>
