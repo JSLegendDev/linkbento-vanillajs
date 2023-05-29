@@ -6,7 +6,7 @@
 :root {
     font-family: Pangolin, Arial, Helvetica, sans-serif;
     color: #28282B;
-    font-size: calc(1em + 0.2vw);
+    font-size: calc(1em + 0.1vw);
 }
 
 .centered-text {
@@ -61,9 +61,10 @@
 }
 
 button {
-    border-color:#28282B;
     color:#28282B;
     background-color: #dedede;
+    border-style: solid;
+    border-color:#28282B;
     border-radius: 3px;
     font-size: 1rem;
     font-family: Pangolin;
@@ -77,4 +78,20 @@ button:active {
 input {
     font-size: 1rem;
     font-family: Pangolin;
+    border-style: solid;
+    border-color: #28282B;
+    border-radius: 3px;
+}
+
+#copy-button {
+    margin-bottom: 8vh;
+}
+
+#message {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+footer {
+    margin-top: 2vh;
 }

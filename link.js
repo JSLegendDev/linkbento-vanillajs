@@ -33,6 +33,7 @@ function main() {
         linkCard.title.innerText = link.titleField
         linkCard.url.innerText = link.urlField
         linkCard.url.href = link.urlField
+        linkCard.url.target = '_blank'
         linkCard.description.innerText = link.descriptionField
         
         linkCard.container.appendChild(linkCard.title)
