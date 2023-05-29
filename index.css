@@ -20,6 +20,13 @@ h1 {
     margin: 0 30vw;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 800px) {
     .column {
         margin: 0 10vw;
@@ -32,4 +39,12 @@ h1 {
 
 #links {
     margin: 3vh 0;
+}
+
+#links > * {
+    margin-top: 1vh;
+}
+
+#links > * > * {
+    margin-top: 1vh;
 }
