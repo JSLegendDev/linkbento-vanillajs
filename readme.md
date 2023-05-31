@@ -8,4 +8,4 @@ Inspired by the japanese lunch box called "bento" the idea is to make a "lunch b
 
 ## This was built for an HTML/CSS/JavaScript tutorial
 
-Watch the tutorial here : (TBD)
+Watch the tutorial here : [https://jslegenddev.github.io/linkbento-vanillajs/](https://jslegenddev.github.io/linkbento-vanillajs/)
