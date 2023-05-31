@@ -72,7 +72,7 @@ function main() {
             }
             bentoData.push(linkData) 
         }
-        generatedLink.innerText = `${location.protocol}${location.host}/linkbento-vanillajs/link.html?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
+        generatedLink.innerText = `https://jslegenddev.github.io/linkbento-vanillajs/link.html?data=${window.btoa(encodeURIComponent(JSON.stringify(bentoData)))}`
     })
 
     const copyButton = document.getElementById('copy-button')
