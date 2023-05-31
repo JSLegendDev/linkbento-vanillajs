@@ -1,6 +1,6 @@
 @font-face {
     font-family: Pangolin;
-    src: url('/Pangolin-Regular.ttf');
+    src: url('./Pangolin-Regular.ttf');
 }
 
 :root {
